@@ -1,0 +1,12 @@
+version: "2"
+services:
+  trip7_db_mongo:
+    image: mongo:4.0.14
+    container_name: "test4map"
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+       MONGO_INITDB_ROOT_USERNAME: root
+       MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: test4map
