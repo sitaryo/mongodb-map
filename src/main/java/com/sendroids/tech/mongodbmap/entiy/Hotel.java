@@ -1,9 +1,5 @@
 package com.sendroids.tech.mongodbmap.entiy;
 
-
-//import com.mongodb.client.model.geojson.Point;
-//import com.querydsl.mongodb.Point;
-
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
@@ -14,8 +10,8 @@ import org.springframework.data.mongodb.core.index.GeoSpatialIndexType;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
 @Entity
+@Data
 @Document("hotel")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Hotel {

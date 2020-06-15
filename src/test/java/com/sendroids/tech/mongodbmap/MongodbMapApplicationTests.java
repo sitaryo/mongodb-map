@@ -2,7 +2,6 @@ package com.sendroids.tech.mongodbmap;
 
 import com.sendroids.tech.mongodbmap.entiy.Area;
 import com.sendroids.tech.mongodbmap.entiy.AreaRepository;
-import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,12 +19,15 @@ class MongodbMapApplicationTests {
 
     @Test
     void contextLoads() {
-//        insert();
         find();
     }
 
+    @Test
+    public void insertData(){
+        insert();
+    }
+
     private void find() {
-//        var areas = areaRepository.findAll();
 
         var point = new Point(3,1);
         var areas = areaRepository.findByGeometryContainsPoint(point);
